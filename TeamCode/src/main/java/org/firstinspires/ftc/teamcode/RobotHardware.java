@@ -66,11 +66,11 @@ public class RobotHardware {
         this.hwMap = hwMap;
 
         // Initialize the drivetrain motors
-        this.motorFrontLeft  = new TerrorMotor(((PhotonDcMotor)hwMap.get(DcMotor.class, "motorFrontLeft")));
+        this.motorFrontLeft  = new TerrorMotor(((PhotonDcMotor)hwMap.get(DcMotor.class, "frontLeftMotor")));
         this.motorFrontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        this.motorFrontRight = new TerrorMotor(((PhotonDcMotor)hwMap.get(DcMotor.class, "motorFrontRight")));
-        this.motorRearRight  = new TerrorMotor(((PhotonDcMotor)hwMap.get(DcMotor.class, "motorRearRight")));
-        this.motorRearLeft   = new TerrorMotor(((PhotonDcMotor)hwMap.get(DcMotor.class, "motorRearLeft")));
+        this.motorFrontRight = new TerrorMotor(((PhotonDcMotor)hwMap.get(DcMotor.class, "frontRightMotor")));
+        this.motorRearRight  = new TerrorMotor(((PhotonDcMotor)hwMap.get(DcMotor.class, "backRightMotor")));
+        this.motorRearLeft   = new TerrorMotor(((PhotonDcMotor)hwMap.get(DcMotor.class, "backLeftMotor")));
         this.motorFrontLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         this.motorFrontRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         this.motorRearLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
@@ -78,14 +78,14 @@ public class RobotHardware {
 
 
         // Initialize the drivetrain servos
-        this.servoFrontLeft  = new TerrorAxonServo((PhotonCRServo) hwMap.get(CRServo.class, "servoFrontLeft"));
-        this.servoFrontRight = new TerrorAxonServo((PhotonCRServo) hwMap.get(CRServo.class, "servoFrontRight"));
-        this.servoRearRight  = new TerrorAxonServo((PhotonCRServo) hwMap.get(CRServo.class, "servoRearRight"));
-        this.servoRearLeft   = new TerrorAxonServo((PhotonCRServo) hwMap.get(CRServo.class, "servoRearLeft"));
-        AnalogInput servoFrontLeftEncoder  = hwMap.get(AnalogInput.class, "encoderFrontLeft");
-        AnalogInput servoFrontRightEncoder = hwMap.get(AnalogInput.class, "encoderFrontRight");
-        AnalogInput servoRearRightEncoder  = hwMap.get(AnalogInput.class, "encoderRearRight");
-        AnalogInput servoRearLeftEncoder   = hwMap.get(AnalogInput.class, "encoderRearLeft");
+        this.servoFrontLeft  = new TerrorAxonServo((CRServo) hwMap.get(CRServo.class, "frontLeftServo"));
+        this.servoFrontRight = new TerrorAxonServo((CRServo) hwMap.get(CRServo.class, "frontRightServo"));
+        this.servoRearRight  = new TerrorAxonServo((CRServo) hwMap.get(CRServo.class, "backRightServo"));
+        this.servoRearLeft   = new TerrorAxonServo((CRServo) hwMap.get(CRServo.class, "backLeftServo"));
+        AnalogInput servoFrontLeftEncoder  = hwMap.get(AnalogInput.class, "frontLeftEncoder");
+        AnalogInput servoFrontRightEncoder = hwMap.get(AnalogInput.class, "frontRightEncoder");
+        AnalogInput servoRearRightEncoder  = hwMap.get(AnalogInput.class, "backRightEncoder");
+        AnalogInput servoRearLeftEncoder   = hwMap.get(AnalogInput.class, "backLeftEncoder");
 
         this.servoFrontLeft.setServoEncoder(servoFrontLeftEncoder);
         this.servoFrontRight.setServoEncoder(servoFrontRightEncoder);

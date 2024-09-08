@@ -6,6 +6,7 @@ import com.outoftheboxrobotics.photoncore.hardware.servo.PhotonCRServo;
 import com.outoftheboxrobotics.photoncore.hardware.servo.PhotonLynxServoController;
 import com.outoftheboxrobotics.photoncore.hardware.servo.PhotonServoController;
 import com.qualcomm.robotcore.hardware.AnalogInput;
+import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.CRServoImplEx;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.ServoControllerEx;
@@ -22,11 +23,11 @@ public class TerrorAxonServo {
     private double offset = 0;
     private double lastPower;
     private AnalogInput servoEncoder = null;
-    private final PhotonCRServo crservo;
+    private final CRServo crservo;
 
     private final double powerThreshold = 0.0001;
 
-    public TerrorAxonServo(@NonNull PhotonCRServo crservo) {
+    public TerrorAxonServo(@NonNull CRServo crservo) {
         this.crservo = crservo;
         this.lastPower = crservo.getPower();
     }

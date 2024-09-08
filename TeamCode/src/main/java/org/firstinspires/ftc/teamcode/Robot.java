@@ -96,7 +96,7 @@ public class Robot {
         // Set up some camera stuff
         this.camera = new TerrorCamera.VisionPortalInitialization()
                 .setCamera(hardware.cameraName)
-                .setCameraResolution(new Size(1280, 800))
+                .setCameraResolution(new Size(1280, 960))
                 .detectAprilTags()
                 .init();
 

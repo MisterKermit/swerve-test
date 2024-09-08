@@ -25,7 +25,7 @@ public class WheelRotationPidTuning extends LinearOpMode {
         hw.init(hardwareMap, LynxModule.BulkCachingMode.AUTO);
         dashboard = FtcDashboard.getInstance();
         telemetry = new MultipleTelemetry(telemetry, dashboard.getTelemetry()); /// i forgot how to add the motor/pid constants to telemetry lmao
-        Robot terrorbot= new Robot();
+        Robot terrorbot = new Robot();
         terrorbot.init(this, hw, telemetry);
 
         while (opModeIsActive()) {

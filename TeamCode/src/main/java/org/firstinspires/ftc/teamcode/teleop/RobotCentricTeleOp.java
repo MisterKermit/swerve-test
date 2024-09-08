@@ -12,13 +12,14 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import org.firstinspires.ftc.robotcore.external.navigation.CurrentUnit;
 import org.firstinspires.ftc.teamcode.Robot;
 import org.firstinspires.ftc.teamcode.RobotHardware;
+import org.firstinspires.ftc.teamcode.TestingHardware;
 import org.firstinspires.ftc.teamcode.util.math.Coordinate;
 
 @Config
 @Photon
 @TeleOp
 public class RobotCentricTeleOp extends LinearOpMode {
-    public static final double DRIVESPEED = 1.0;
+    public static final double DRIVESPEED = 0.5;
     private RobotHardware hardware = new RobotHardware();
     private Robot robot = new Robot();
     private FtcDashboard dashboard;

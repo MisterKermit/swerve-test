@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode.util.math;
 
-import static org.firstinspires.ftc.teamcode.util.paths.followers.PurePursuitController.chooseCloserSolution;
+//import static org.firstinspires.ftc.teamcode.util.paths.followers.PurePursuitController.chooseCloserSolution;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -111,6 +111,7 @@ public class Ellipse extends Geometry{
         }
 
         // Return the valid solution, or if there are two, the one closer to point 2
-        return chooseCloserSolution(sol1, sol2, lineSegment.bound2);
+//        return chooseCloserSolution(sol1, sol2, lineSegment.bound2);
+        return sol1;
     }
 }

@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import org.firstinspires.ftc.teamcode.Robot;
 import org.firstinspires.ftc.teamcode.RobotHardware;
 import org.firstinspires.ftc.teamcode.drive.swerve.SwerveModule;
-import org.firstinspires.ftc.teamcode.util.localizers.SwerveLocalizer;
+//import org.firstinspires.ftc.teamcode.util.localizers.SwerveLocalizer;
 import org.firstinspires.ftc.teamcode.util.math.Coordinate;
 import org.firstinspires.ftc.teamcode.util.pid.PID;
 import org.firstinspires.ftc.teamcode.util.pid.PidController;
@@ -22,7 +22,7 @@ import org.firstinspires.ftc.teamcode.util.pid.PidfController;
 @Photon
 @TeleOp
 public class FieldCentricTeleOp extends LinearOpMode {
-    public static final double DRIVESPEED = 1.0;
+    public static final double DRIVESPEED = 0.5;
     private static final double ROTATION_SPEED = 180;
     private final RobotHardware hardware = new RobotHardware();
     private final Robot robot = new Robot();
